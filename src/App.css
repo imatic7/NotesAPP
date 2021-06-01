@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
+  margin: 0 auto;
+  width: calc(100% - 100px);
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: sans-serif;
+}
+
+.notes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 40px;
+  justify-content: flex-start;
+}
+
+.one-note-container {
+  width: 150px;
+  height: 150px;
+  background-color: #ebe7e7f8;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  margin: 25px;
+  cursor: pointer;
+  border: 2px solid #faf5f5;
+  transition: border-color 200ms ease-in-out;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+.one-note-container:hover,
+:focus {
+  border-color: #a70e46;
+}
+
+.add-note-btn {
+  width: 150px;
+  height: 150px;
+  background-color: #a70e46;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  position: relative;
+  overflow: hidden;
   color: white;
+  font-size: 80px;
 }
 
-.App-link {
-  color: #61dafb;
+.icons-style :hover {
+  color: #a70e46;
+  cursor: pointer;
+}
+.save-edit {
+  float: right;
+}
+.delete {
+  float: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.textarea {
+  display: block;
+  width: 90%;
+  height: 500px;
+  overflow-x: hidden;
+  border: none;
+  font-size: 15px;
+  resize: none;
+}
+
+.textarea :hover,
+:focus {
+  border: none;
+  outline: none;
+}
+
+.markdown-style {
+  margin: 10px;
+  font-family: sans-serif;
 }
